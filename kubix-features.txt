@@ -1,0 +1,59 @@
+Kubix
+
+	Example:
+		kubix -s (source) -d (destination) -iter 2
+
+	Commandline		Flags			Details
+	kubix -destination	-d --dest		
+	kubix -help		--{feature}		Commandline Reference, --{feature} allows for specific reference
+	kubix -iter		1,2,3..			Iteration Count
+	kubix -source		-s -d -f *		Source file/directory
+	kubix -perflog		--perf			Performance Logging
+	kubix -logfile					Logfile location
+	kubix -csv					Works with logfile, formats in CSV (default plain text)
+	kubix -install		--{feature}		Install tools (GUI, API, Apk, Plugins, Debugging, Samples, etc)
+	kubix -app		--install		Install Apps (Python, Calculator, etc)
+	kubix -crypto	
+	kubix -transcode	--auto --kbxv, etc.	Transcode media files into KBXV, KBXA, KBXG, KBXI, etc.
+	kubix -verbose					Emulated (for performance) verbose output
+	kubix -visualize				Tool to visualize data compression
+	kubix -gpu		--enable --disable	GPU processing
+	kubix -config		--generate		Loads a configuration file (bypass to defaults & may increase perf.)
+	kubix -tesilate					Tesilation
+	kubix -debth					Debth of compression (increases ratio but effect performance)
+	kubix -cache		--size 0-100%		Caching used for big & real time data
+	kubix -sync					Sync from one client or server to another
+	kubix -extract
+	kubix -snapshot		--snap			Enable snapshotting and incremtantal/full hybrid backups.
+
+	GUI Tools
+	kubix -gui		--theme
+
+	Debug (Advanced Tools)
+	kubix -boot					Boot directly to kubix archive using kubix kernel
+	kubix -vmount					Virtual Mounting Tool
+	kubix -vpn
+	kubix -virtualize
+	kubix -clone
+	kubix -proxy
+	kubix -socket		-n:1-9  -port:9001	WebSocket Server Protocal (supports multiple sockets with -n {number} )
+
+	Plugins
+	kubix -plugin-add	--chalkboard		Shared colaboritive chalkboard (realtime over websocket port)
+	kubix -plugin-add	--productivity		Shared colaboritive productivity tools (realtime over websocket port)
+	kubix -plugin-add	--cloud9.io.ide		Shared colaboritive Cloud9 IDE (realtime over websocket port)
+	kubix -plugin-add	--webplayer		Webplayer server plugin
+	kubix -plugin-add	--toolbox		Set of productivity commandline tools (ssh, etc)
+
+	VPlayer						Built in video player with advanced options.
+	VPayer -debugging
+	TaskManager					Built in Kubix task manager
+
+[Binaries]
+bin\
+ kubix.exe
+ kubix-vplayer.exe
+ vmount.exe
+ websocket.exe
+ vpn.exe
+plugins\

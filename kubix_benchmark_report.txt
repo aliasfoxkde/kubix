@@ -1,0 +1,14 @@
+KUBIX 3D Compression Algorithm - Performance Report
+============================================================
+
+Algorithm Comparison:
+----------------------------------------
+Algorithm       Ratio    Time(s)  Accuracy
+----------------------------------------
+gzip            1.00     0.04     1.000   
+bz2             1.00     0.19     1.000   
+lzma            1.00     0.24     1.000   
+kubix_4         3.76     0.40     0.006   
+kubix_8         13.64    0.10     0.005   
+kubix_16        48.05    0.03     0.004   
+

@@ -1,0 +1,176 @@
+/* 
+	Style.css
+	by
+	Micehal L. C. Kinney III
+*/
+
+/* Global */
+* {
+	text-align: center;
+	color: #0000AA;
+	text-shadow: 1px 1px 2px #888888;
+}
+/* Dark Theme */
+/* {
+	color: #222;
+	text-shadow: 0px 2px 3px #555;
+}
+*/
+
+/* 3D Fake Hover Effects */
+.cube-0 td:hover { /* left */
+	left: -3px;
+	top: 5px;
+	box-shadow: .05in -.05in .10in #000000 !important;
+}
+.cube-1 td:hover { /* right */
+	left: 5px;
+	top: 5px;
+	box-shadow: -.05in -.05in .10in #000000 !important;
+}
+td:hover { /* top & default */
+	left: -7px;
+	top: -5px;
+	box-shadow: .05in .05in .10in #000000 !important;
+}
+
+td:hover {
+	position: relative;
+	/*font-weight: bold;*/
+}
+td, td:hover {
+	box-shadow: inset 0px 0px 3px #AAA;
+}
+
+/* Effects and colors */
+small {
+	font-size: 6px;
+	/* vertical-align: text-bottom; */
+}
+td:hover {
+	background-color: #CCCCFF !important;
+}
+.cube-0 tr:nth-child(even), 
+.cube-1 tr:nth-child(even) {
+	background-color: #DFDFDF;
+}
+.cube-0 tr:nth-child(odd),
+.cube-1 tr:nth-child(odd) {
+	background-color: #FFFFFF;
+}
+.cube-0 td:nth-child(odd),
+.cube-1 td:nth-child(odd) {
+	background-color: #F0F0F0;
+}
+.cube-2 td:nth-child(odd) {
+	background-color: #F0F0F0;
+}
+.cube-2 tr:nth-child(odd) {
+	background-color: #DFDFDF;
+}
+hr {border:none}
+
+/* Layout IDs */
+table {
+    border-spacing: 0px;
+    border-collapse: none;
+	border-color: #0000AA;
+	background: #FFFFFF;
+}
+body {
+	margin-top: 125px;
+	/*background: #DDE8FD;*/
+	-webkit-print-color-adjust: exact;
+}
+td {
+	border: solid 1px;
+	height: 30px;
+	width: 30px;
+}
+hr {
+	margin-top: 12px;	
+	border-top:1px dashed;
+}
+div {
+	width: 33%;
+	float: left;
+}
+
+/* Layout Classes */
+.cube-0, .cube-1, .cube-2, .cube-3, 
+.cube-4, .cube-5, .cube-6, .cube-7, 
+.cube-8, .cube-9, .cube-10, .cube-11 {
+	position: relative;
+	text-align: center;
+}
+.cube-0 {
+	width: auto;
+	width: 1.375in;
+	top: .025in;
+	left: -.0125px;
+	box-shadow: .05in .05in .08in #888888;
+}
+.cube-1 {
+	transform: skew(0deg,-45deg);
+	width: .95in;
+	top: -1.7in;
+	right: -1.375in;
+	box-shadow: .05in .05in .08in #888888;
+}
+.cube-2 {
+	transform: skew(-45deg,0deg);
+	width: 1.38in;
+	top: -3.42in;
+	right: -.47in;
+	margin-bottom: -205px;
+	box-shadow: -0.02in -.01in .08in #888888;
+}
+.cube-2 td {
+	height: 0px !important;
+}
+.cube-3, .cube-4, .cube-5, .cube-6,
+.cube-7, .cube-8, .cube-9, .cube-10,
+.cube-11 {
+	transform: skew(-45deg,0deg);
+	width: 137px;
+	right: -55px;
+	margin-top: 6px;
+	box-shadow: 0.05in .05in .08in #888888;
+}
+.cube-3 td, .cube-4 td, .cube-5 td, .cube-6 td,
+.cube-7 td, .cube-8 td, .cube-9 td, .cube-10 td,
+.cube-11 td {
+	height: 16px !important;
+}
+.container {
+	width: 8.5in;
+	display: block;
+	text-align: center;
+}
+.key {
+	position: absolute;
+	top: 5px; left: 10px;
+	text-align: left;
+	font-weight: bold;
+}
+
+/* Page styles */
+@page {
+	@bottom-right {
+		content: counter(page) " of " counter(pages);
+	}
+}
+
+/* Fixes print styles */
+@media print {
+	* {	
+		font-size: 15px;
+	}
+	small {
+		font-size: 6px;
+	}
+	.cube-2 {
+		top: -3.44in !important;
+	}
+}
+
